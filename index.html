@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nan Mudalvan — Climate Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Nan Mudalvan</h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#stats">Stats</a>
+        <a href="#tips">Tips</a>
+        <a href="#tools">Tools</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="hero">
+      <h2>Climate awareness. Local action.</h2>
+      <p>Simple tools and tips to learn about climate change and take steps in your community.</p>
+      <button id="simulateBtn">Generate sample climate data</button>
+    </section>
+
+    <section id="about" class="card">
+      <h3>About the Project</h3>
+      <p>
+        This small project shows sample climate indicators and practical tips. Replace the simulated data
+        with a real API (OpenWeatherMap, etc.) when you have an API key.
+      </p>
+    </section>
+
+    <section id="stats" class="card">
+      <h3>Climate Stats (Sample)</h3>
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-value" id="tempValue">-- °C</div>
+          <div class="stat-label">Temperature</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" id="co2Value">-- ppm</div>
+          <div class="stat-label">CO₂ (est.)</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" id="seaValue">-- cm</div>
+          <div class="stat-label">Sea Level Rise</div>
+        </div>
+      </div>
+      <small class="muted">Data shown here is simulated for demonstration.</small>
+    </section>
+
+    <section id="tips" class="card">
+      <h3>Practical Tips</h3>
+      <ul>
+        <li>Reduce waste: prefer reusable items and compost organic waste.</li>
+        <li>Use energy-efficient bulbs and appliances.</li>
+        <li>Plant native trees and support urban green spaces.</li>
+        <li>Choose public transport, cycling, or carpooling when possible.</li>
+      </ul>
+    </section>
+
+    <section id="tools" class="card">
+      <h3>Tools</h3>
+
+      <div class="tool-row">
+        <div class="tool">
+          <h4>Temperature Converter</h4>
+          <label>
+            °C
+            <input type="number" id="cInput" placeholder="e.g. 25" />
+          </label>
+          <div class="converter-results">
+            <div>°F: <span id="fResult">--</span></div>
+            <div>K: <span id="kResult">--</span></div>
+          </div>
+          <button id="convertBtn">Convert</button>
+        </div>
+
+        <div class="tool">
+          <h4>Save Note</h4>
+          <textarea id="noteInput" rows="3" placeholder="Add a climate action note..."></textarea>
+          <div class="tool-actions">
+            <button id="saveNoteBtn">Save Note</button>
+            <button id="clearNotesBtn" class="danger">Clear Notes</button>
+          </div>
+          <div id="notesList" class="notes-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer card">
+      <p>Made with ♡ — Nan Mudalvan Climate Project demo</p>
+      <small class="muted">Tip: to add live weather, integrate OpenWeatherMap API in <code>script.js</code>.</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
